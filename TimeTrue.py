@@ -36,19 +36,21 @@ graphics_list=[]
 for item in graphics:
 	data=pygame.image.load(item)
 	graphics_list.append(data)
-
-
-clock=pygame.time.Clock()
-screen=pygame.display.set_mode((1280,720))
-pygame.display.set_caption("Time True")
-color=(144, 238,144)
-
-
 background=graphics_list[0]
 task=graphics_list[1]
 add=graphics_list[2]
 remove=graphics_list[3]
 edit=graphics_list[4]
+icon=graphics_list[5]
+
+clock=pygame.time.Clock()
+screen=pygame.display.set_mode((1280,720))
+pygame.display.set_icon(icon)
+pygame.display.set_caption("Time True")
+color=(144, 238,144)
+
+
+
 
 
 
@@ -107,7 +109,7 @@ class TextView():
 		self.screen.blit(text_surface, (self.t_x, self.t_y))
 
 
-class Coordinate():
+class Quadrant():
 	global taskt_l
 	def __init__(self,surface=screen,x=0,y=0,c=0):
 		self.x=x
@@ -221,9 +223,9 @@ while game_running:
 
 	screen.blit(background,(0,0))
 	
-	Coordinate(x=140,y=91,c=0)
-	Coordinate(x=430,y=91,c=1)
-	Coordinate(x=140,y=386,c=2)
-	Coordinate(x=430,y=386,c=3)
+	Quadrant(x=140,y=91,c=0)
+	Quadrant(x=430,y=91,c=1)
+	Quadrant(x=140,y=386,c=2)
+	Quadrant(x=430,y=386,c=3)
 	TextEdit(screen,text=note_txt,t_x=860,t_y=110,t_w=340,t_h=530)
 	pygame.display.update()
