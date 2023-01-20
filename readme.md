@@ -7,3 +7,6 @@
 
 # Based on Eisenhower Principle
 ![](https://github.com/01one/Time-True/blob/main/Presentation/Time%20True%20Presentation%201.png)
+
+## Download standalone windows application
+* https://mahid.itch.io/time-true
