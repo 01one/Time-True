@@ -183,7 +183,8 @@ game_running=True
 while game_running:
 	clock.tick(60)
 	mouse_position=pygame.mouse.get_pos()
-	for event in pygame.event.get():
+	for event in [pygame.event.wait()]+pygame.event.get():
+	#for event in pygame.event.get():
 		if event.type==QUIT:
 			with open(path, 'wb') as data:
 				all_data=[]
